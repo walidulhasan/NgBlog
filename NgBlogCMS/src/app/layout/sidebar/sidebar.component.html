@@ -1,0 +1,76 @@
+
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            <mat-icon mat-list-icon>dashboard</mat-icon>
+          Dashboard
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-list role="list">
+        <mat-list-item role="listitem">
+            <a class="menuListLink" href="dashboard">Dashboard</a>
+        </mat-list-item>
+      </mat-list>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            <mat-icon mat-list-icon>library_books</mat-icon>
+          Blog Posts
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-list role="list">
+        <mat-list-item role="listitem">
+            <a class="menuListLink" href="dashboard/blog/create">Add Post</a>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+            <a class="menuListLink" href="dashboard/blog/list">All Posts</a>
+        </mat-list-item>
+      </mat-list>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false"
+                         *ngIf="role == 'Admin'">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon mat-list-icon>people</mat-icon> Authors
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-list role="list">
+        <mat-list-item role="listitem">
+            <a class="menuListLink" href="dashboard/authors">All Authors</a>
+        </mat-list-item>
+      </mat-list>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false"
+                         *ngIf="role == 'Admin'">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon mat-list-icon>category</mat-icon> Categories
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-list role="list">
+        <mat-list-item role="listitem">
+            <a class="menuListLink" href="dashboard/cats">All Categories</a>
+        </mat-list-item>
+      </mat-list>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon>visibility</mat-icon> Website
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-list role="list">
+        <mat-list-item role="listitem">
+          <a class="menuListLink" href="/" target="_blank">Visit Website <mat-icon>open_in_new</mat-icon></a>
+        </mat-list-item>
+      </mat-list>
+
+    </mat-expansion-panel>
+  </mat-accordion>

@@ -1,0 +1,10 @@
+mat-icon{
+    margin-right: 5px;
+    font-size: 20px;
+}
+.mat-expansion-panel-spacing{
+    margin: 0;
+}
+.menuListLink{
+    text-decoration: none;
+}

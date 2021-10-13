@@ -1,0 +1,19 @@
+<mat-toolbar>
+    <img src="../../../assets/assets/images/idb-bisew.png" width="35"> &nbsp;
+    <span appColorgreen>IsDB BISEW</span>
+    <span class="example-spacer"></span>
+    <img src="{{getCommenterPic()}}" width="35" style="border-radius: 50%;"> &nbsp;
+    <!--menu-->
+    <button style="cursor: pointer;" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <span style="font-size: 16px; font-weight: bold;">{{authorDetails?.name}}</span>
+      </button>
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+ </mat-toolbar>
